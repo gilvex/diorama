@@ -1,3 +1,4 @@
+//? if >=1.21.6 {
 package dev.diorama.render;
 
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
@@ -19,7 +20,7 @@ import net.minecraft.client.renderer.BindGroupLayouts;
 import net.minecraft.client.renderer.RenderPipelines;
 
 public final class DioramaPipelines {
-	/** The fog over unknown map areas: known-area mask in sampler 0, noise in sampler 1. */
+	// The fog over unknown map areas: known-area mask in sampler 0, noise in sampler 1.
 	//? if >=26.1 {
 	public static final RenderPipeline FOG = RenderPipelines.register(
 		RenderPipeline.builder(RenderPipelines.GLOBALS_SNIPPET)
@@ -53,7 +54,8 @@ public final class DioramaPipelines {
 	private DioramaPipelines() {
 	}
 
-	/** Forces class loading so the pipeline is registered before shaders compile. */
+	// Forces class loading so the pipeline is registered before shaders compile.
 	public static void init() {
 	}
 }
+//?}
